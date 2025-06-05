@@ -8,6 +8,8 @@ import com.advancia.OfficineMilanesi.infrastructure.model.FatturaArticoloIdEntit
 import com.advancia.OfficineMilanesi.infrastructure.model.FatturaEntity;
 import org.mapstruct.Mapper;
 
+import java.util.List;
+
 @Mapper
 public interface FatturaEntityMappers {
     Fattura convertFromEntity(FatturaEntity fatturaEntity);
@@ -18,4 +20,7 @@ public interface FatturaEntityMappers {
 
     FatturaArticoloId convertFromEntity(FatturaArticoloIdEntity fatturaArticoloIdEntity);
     FatturaArticoloIdEntity convertToEntity(FatturaArticoloId fatturaArticoloId);
+
+    List<Fattura> convertFromEntity(List<FatturaEntity> fattureEntity);
+    List<FatturaEntity> convertToEntity(List<Fattura> fatture);
 }

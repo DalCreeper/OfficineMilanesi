@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "VEICOLI")
@@ -16,32 +17,46 @@ public class VeicoloEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
 
+    @Column(name = "MODELLO_VETT")
     private String modelloVett;
 
+    @Column(name = "TELAIO")
     private String telaio;
 
-    @Column(nullable = false)
+    @Column(name = "TARGA", nullable = false)
     private String targa;
 
+    @Column(name = "MOTORE")
     private String motore;
 
+    @Column(name = "CILINDRATA")
     private Integer cilindrata;
 
+    @Column(name = "DATA_IMMATR")
     private LocalDate dataImmatr;
 
+    @Column(name = "DATA_VENDITA")
     private LocalDate dataVendita;
 
+    @Column(name = "STATO")
     private String stato;
 
+    @Column(name = "KM_PERCORSI")
     private Integer kmPercorsi;
 
     @ManyToOne
-    @JoinColumn(name = "id_cliente", nullable = false)
+    @JoinColumn(name = "ID_CLIENTE", nullable = false)
     private ClienteEntity clienteEntity;
 
+    @Column(name = "DATA_INS")
     private LocalDate dataIns;
 
+    @Column(name = "DATA_AGG")
     private LocalDate dataAgg;
+
+    @OneToMany(mappedBy = "veicoloEntity")
+    private List<FatturaEntity> fatture;
 }

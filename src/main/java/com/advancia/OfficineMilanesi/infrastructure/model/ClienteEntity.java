@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "CLIENTI")
@@ -21,28 +22,45 @@ public class ClienteEntity implements Serializable {
     @Column(name = "ID")
     private int id;
 
+    @Column(name = "RAG_SOCIALE")
     private String ragSociale;
 
+    @Column(name = "P_IVA")
     private String p_iva;
 
-    @Column(unique = true, nullable = false)
+    @Column(name = "COD_FISCALE", unique = true, nullable = false)
     private String codFiscale;
 
+    @Column(name = "PEC")
     private String pec;
 
+    @Column(name = "TELEFONO")
     private String telefono;
 
+    @Column(name = "INDIRIZZO")
     private String indirizzo;
 
+    @Column(name = "CAP")
     private String cap;
 
+    @Column(name = "PROVINCIA")
     private String provincia;
 
+    @Column(name = "CITTA")
     private String citta;
 
+    @Column(name = "NAZIONE")
     private String nazione;
 
+    @Column(name = "DATA_INS")
     private LocalDate dataIns;
 
+    @Column(name = "DATA_AGG")
     private LocalDate dataAgg;
+
+    @OneToMany(mappedBy = "clienteEntity")
+    private List<FatturaEntity> listaFatture;
+
+    @OneToMany(mappedBy = "clienteEntity")
+    private List<VeicoloEntity> veicoli;
 }

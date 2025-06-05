@@ -1,7 +1,7 @@
 <jboss-deployment-structure>
     <deployment>
         <dependencies>
-            <module name="deployment.PiadineriaAdvanciaEjb.jar" services="import"/>
+            <module name="deployment.OfficineMilanesi.war" services="import"/>
         </dependencies>
         <exclude-subsystems>
             <subsystem name="jaxrs"/>

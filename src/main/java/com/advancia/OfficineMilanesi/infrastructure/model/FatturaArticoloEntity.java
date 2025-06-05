@@ -17,15 +17,17 @@ public class FatturaArticoloEntity {
 
     @Id
     @ManyToOne
-    @JoinColumn(name = "id_fattura", nullable = false)
+    @JoinColumn(name = "ID_FATTURA", nullable = false)
     private FatturaEntity fatturaEntity;
 
     @Id
     @ManyToOne
-    @JoinColumn(name = "id_articolo", nullable = false)
+    @JoinColumn(name = "ID_ARTICOLO", nullable = false)
     private ArticoloEntity articoloEntity;
 
+    @Column(name = "QUANTITA")
     private Integer quantita;
 
+    @Column(name = "SCONTO")
     private BigDecimal sconto;
 }

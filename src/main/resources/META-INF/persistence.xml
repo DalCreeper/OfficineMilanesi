@@ -6,16 +6,17 @@
     <persistence-unit name="myPersistenceUnit" transaction-type="JTA">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <jta-data-source>java:/jdbc/OracleDS</jta-data-source>
-        <class>com.advancia.PiadineriaAdvanciaEJB.domain.model.DoughEJB</class>
-        <class>com.advancia.PiadineriaAdvanciaEJB.domain.model.EmployeeEJB</class>
-        <class>com.advancia.PiadineriaAdvanciaEJB.domain.model.MeatBaseEJB</class>
-        <class>com.advancia.PiadineriaAdvanciaEJB.domain.model.OptionalElementsEJB</class>
-        <class>com.advancia.PiadineriaAdvanciaEJB.domain.model.PiadinaEJB</class>
-        <class>com.advancia.PiadineriaAdvanciaEJB.domain.model.SaucesEJB</class>
+        <class>com.advancia.OfficineMilanesi.infrastructure.model.ArticoloEntity</class>
+        <class>com.advancia.OfficineMilanesi.infrastructure.model.ClienteEntity</class>
+        <class>com.advancia.OfficineMilanesi.infrastructure.model.FatturaArticoloEntity</class>
+        <class>com.advancia.OfficineMilanesi.infrastructure.model.FatturaArticoloIdEntity</class>
+        <class>com.advancia.OfficineMilanesi.infrastructure.model.FatturaEntity</class>
+        <class>com.advancia.OfficineMilanesi.infrastructure.model.FilialeEntity</class>
+        <class>com.advancia.OfficineMilanesi.infrastructure.model.MeccanicoEntity</class>
+        <class>com.advancia.OfficineMilanesi.infrastructure.model.VeicoloEntity</class>
         <properties>
             <!-- Hibernate Properties -->
 			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle12cDialect"/>
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
             <property name="hibernate.show_sql" value="true"/>
         </properties>
     </persistence-unit>
