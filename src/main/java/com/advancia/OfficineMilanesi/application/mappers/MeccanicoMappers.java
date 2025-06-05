@@ -11,6 +11,6 @@ public interface MeccanicoMappers {
     MeccanicoDto convertFromDomain(Meccanico meccanico);
     Meccanico convertToDomain(MeccanicoDto meccanicoDto);
 
-    List<MeccanicoDto> convertFromEntity(List<Meccanico> meccanici);
-    List<Meccanico> convertToEntity(List<MeccanicoDto> meccaniciDto);
+    List<MeccanicoDto> convertFromDomain(List<Meccanico> meccanici);
+    List<Meccanico> convertToDomain(List<MeccanicoDto> meccaniciDto);
 }

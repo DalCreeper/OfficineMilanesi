@@ -19,8 +19,8 @@ public class FilialeServiceImpl implements FilialeService {
     }
 
     @Override
-    public Filiale getFilialiById(int id) {
-        return filialeDaoService.getFilialiById(id);
+    public Filiale getFilialeById(int id) {
+        return filialeDaoService.getFilialeById(id);
     }
 
     @Override

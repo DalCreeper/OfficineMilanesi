@@ -11,6 +11,6 @@ public interface FilialeMappers {
     FilialeDto convertFromDomain(Filiale filiale);
     Filiale convertToDomain(FilialeDto filialeDto);
 
-    List<FilialeDto> convertFromEntity(List<Filiale> filiali);
-    List<Filiale> convertToEntity(List<FilialeDto> filialiDto);
+    List<FilialeDto> convertFromDomain(List<Filiale> filiali);
+    List<Filiale> convertToDomain(List<FilialeDto> filialiDto);
 }

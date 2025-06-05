@@ -1,4 +1,4 @@
-package com.advancia.OfficineMilanesi.domain.exceptions;
+package com.advancia.OfficineMilanesi.infrastructure.exceptions;
 
 public class DBException extends RuntimeException {
 	private static final long serialVersionUID = 1L;

@@ -26,7 +26,7 @@ public class ClienteEntity implements Serializable {
     private String ragSociale;
 
     @Column(name = "P_IVA")
-    private String p_iva;
+    private String pIva;
 
     @Column(name = "COD_FISCALE", unique = true, nullable = false)
     private String codFiscale;

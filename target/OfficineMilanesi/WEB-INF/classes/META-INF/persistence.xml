@@ -1,0 +1,23 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                                 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+    <persistence-unit name="myPersistenceUnit" transaction-type="JTA">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <jta-data-source>java:/jdbc/OracleDS</jta-data-source>
+        <class>com.advancia.OfficineMilanesi.infrastructure.model.ArticoloEntity</class>
+        <class>com.advancia.OfficineMilanesi.infrastructure.model.ClienteEntity</class>
+        <class>com.advancia.OfficineMilanesi.infrastructure.model.FatturaArticoloEntity</class>
+        <class>com.advancia.OfficineMilanesi.infrastructure.model.FatturaArticoloIdEntity</class>
+        <class>com.advancia.OfficineMilanesi.infrastructure.model.FatturaEntity</class>
+        <class>com.advancia.OfficineMilanesi.infrastructure.model.FilialeEntity</class>
+        <class>com.advancia.OfficineMilanesi.infrastructure.model.MeccanicoEntity</class>
+        <class>com.advancia.OfficineMilanesi.infrastructure.model.VeicoloEntity</class>
+        <properties>
+            <!-- Hibernate Properties -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle12cDialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>

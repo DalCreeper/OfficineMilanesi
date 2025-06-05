@@ -8,9 +8,9 @@ import java.util.List;
 
 @Mapper
 public interface VeicoloMappers {
-    VeicoloDto convertFromEntity(Veicolo veicolo);
-    Veicolo convertToEntity(VeicoloDto veicoloDto);
+    VeicoloDto convertFromDomain(Veicolo veicolo);
+    Veicolo convertToDomain(VeicoloDto veicoloDto);
 
-    List<VeicoloDto> convertFromEntity(List<Veicolo> veicoli);
-    List<Veicolo> convertToEntity(List<VeicoloDto> veicoliDto);
+    List<VeicoloDto> convertFromDomain(List<Veicolo> veicoli);
+    List<Veicolo> convertToDomain(List<VeicoloDto> veicoliDto);
 }

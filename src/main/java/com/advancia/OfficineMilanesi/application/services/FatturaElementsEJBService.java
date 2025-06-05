@@ -4,7 +4,6 @@ import com.advancia.OfficineMilanesi.application.model.ArticoloDto;
 import com.advancia.OfficineMilanesi.application.model.FatturaDto;
 import com.advancia.OfficineMilanesi.application.model.MeccanicoDto;
 import com.advancia.OfficineMilanesi.application.model.VeicoloDto;
-import com.advancia.OfficineMilanesi.domain.model.Meccanico;
 
 import java.util.List;
 
@@ -20,12 +19,12 @@ public interface FatturaElementsEJBService {
     List<FatturaDto> getFattureByIdCliente(int id);
     List<FatturaDto> getFattureByIdMeccanico(int id);
     List<FatturaDto> getFattureByIdVeicolo(int id);
-    void removeFatturaById(int id);
+    void deleteFattura(int id);
     /* -------------------------------------------------------------------------------------------------------------- */
     List<MeccanicoDto> getAllMeccanici();
     MeccanicoDto getMeccanicoById(int id);
     void createMeccanico(MeccanicoDto meccanicoDto);
-    void updateMeccanico(int id, Meccanico meccanicoAgg);
+    void updateMeccanico(int id, MeccanicoDto meccanicoAgg);
     void deleteMeccanico(int id);
     /* -------------------------------------------------------------------------------------------------------------- */
     List<VeicoloDto> getAllVeicoli();

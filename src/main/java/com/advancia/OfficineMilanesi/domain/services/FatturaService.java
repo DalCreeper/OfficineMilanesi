@@ -10,5 +10,5 @@ public interface FatturaService {
     List<Fattura> getFattureByIdCliente(int id);
     List<Fattura> getFattureByIdMeccanico(int id);
     List<Fattura> getFattureByIdVeicolo(int id);
-    void removeFatturaById(int id);
+    void deleteFattura(int id);
 }

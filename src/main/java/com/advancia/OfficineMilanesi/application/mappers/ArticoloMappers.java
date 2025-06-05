@@ -11,6 +11,6 @@ public interface ArticoloMappers {
     ArticoloDto convertFromDomain(Articolo articolo);
     Articolo convertToDomain(ArticoloDto articoloDto);
 
-    List<ArticoloDto> convertFromEntity(List<Articolo> articoli);
-    List<Articolo> convertToEntity(List<ArticoloDto> articoliDto);
+    List<ArticoloDto> convertFromDomain(List<Articolo> articoli);
+    List<Articolo> convertToDomain(List<ArticoloDto> articoliDto);
 }

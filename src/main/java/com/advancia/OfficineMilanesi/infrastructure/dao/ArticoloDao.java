@@ -1,6 +1,6 @@
 package com.advancia.OfficineMilanesi.infrastructure.dao;
 
-import com.advancia.OfficineMilanesi.domain.exceptions.DBException;
+import com.advancia.OfficineMilanesi.infrastructure.exceptions.DBException;
 import com.advancia.OfficineMilanesi.infrastructure.model.ArticoloEntity;
 
 import javax.ejb.Stateless;

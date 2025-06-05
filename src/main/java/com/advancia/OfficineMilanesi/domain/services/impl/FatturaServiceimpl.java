@@ -39,7 +39,7 @@ public class FatturaServiceimpl implements FatturaService {
     }
 
     @Override
-    public void removeFatturaById(int id) {
-        fatturaDaoService.removeFatturaById(id);
+    public void deleteFattura(int id) {
+        fatturaDaoService.deleteFattura(id);
     }
 }

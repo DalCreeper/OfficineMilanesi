@@ -21,6 +21,6 @@ public interface FatturaMappers {
     FatturaArticoloIdDto convertFromDomain(FatturaArticoloId fatturaArticoloId);
     FatturaArticoloId convertToDomain(FatturaArticoloIdDto fatturaArticoloIdDto);
 
-    List<FatturaDto> convertFromEntity(List<Fattura> fatture);
-    List<Fattura> convertToEntity(List<FatturaDto> fattureDto);
+    List<FatturaDto> convertFromDomain(List<Fattura> fatture);
+    List<Fattura> convertToDomain(List<FatturaDto> fattureDto);
 }

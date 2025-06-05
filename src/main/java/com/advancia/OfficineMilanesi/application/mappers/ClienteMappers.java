@@ -11,6 +11,6 @@ public interface ClienteMappers {
     ClienteDto convertFromDomain(Cliente cliente);
     Cliente convertToDomain(ClienteDto clienteDto);
 
-    List<ClienteDto> convertFromEntity(List<Cliente> clienti);
-    List<Cliente> convertToEntity(List<ClienteDto> clientiDto);
+    List<ClienteDto> convertFromDomain(List<Cliente> clienti);
+    List<Cliente> convertToDomain(List<ClienteDto> clientiDto);
 }
