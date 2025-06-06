@@ -19,7 +19,7 @@ public class FilialeServiceImpl implements FilialeService {
     }
 
     @Override
-    public Filiale getFilialeById(int id) {
+    public Filiale getFilialeById(long id) {
         return filialeDaoService.getFilialeById(id);
     }
 
@@ -29,12 +29,12 @@ public class FilialeServiceImpl implements FilialeService {
     }
 
     @Override
-    public void updateFiliale(int id, Filiale filialeAgg) {
+    public void updateFiliale(long id, Filiale filialeAgg) {
         filialeDaoService.updateFiliale(id, filialeAgg);
     }
 
     @Override
-    public void deleteFiliale(int id) {
+    public void deleteFiliale(long id) {
         filialeDaoService.deleteFiliale(id);
     }
 }

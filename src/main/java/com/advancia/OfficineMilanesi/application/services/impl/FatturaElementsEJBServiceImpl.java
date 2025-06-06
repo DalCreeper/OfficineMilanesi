@@ -40,7 +40,7 @@ public class FatturaElementsEJBServiceImpl implements FatturaElementsEJBService 
     }
 
     @Override
-    public ArticoloDto getArticoloById(int id) {
+    public ArticoloDto getArticoloById(long id) {
         Articolo articolo = articoloService.getArticoloById(id);
         return articoloMappers.convertFromDomain(articolo);
     }
@@ -52,13 +52,13 @@ public class FatturaElementsEJBServiceImpl implements FatturaElementsEJBService 
     }
 
     @Override
-    public void updateArticolo(int id, ArticoloDto articoloAgg) {
+    public void updateArticolo(long id, ArticoloDto articoloAgg) {
         Articolo articolo = articoloMappers.convertToDomain(articoloAgg);
         articoloService.updateArticolo(id, articolo);
     }
 
     @Override
-    public void deleteArticolo(int id) {
+    public void deleteArticolo(long id) {
         articoloService.deleteArticolo(id);
     }
 
@@ -71,31 +71,31 @@ public class FatturaElementsEJBServiceImpl implements FatturaElementsEJBService 
     }
 
     @Override
-    public List<FatturaDto> getFattureByIdFiliale(int id) {
+    public List<FatturaDto> getFattureByIdFiliale(long id) {
         List<Fattura> fatture = fatturaService.getFattureByIdFiliale(id);
         return fatturaMappers.convertFromDomain(fatture);
     }
 
     @Override
-    public List<FatturaDto> getFattureByIdCliente(int id) {
+    public List<FatturaDto> getFattureByIdCliente(long id) {
         List<Fattura> fatture = fatturaService.getFattureByIdCliente(id);
         return fatturaMappers.convertFromDomain(fatture);
     }
 
     @Override
-    public List<FatturaDto> getFattureByIdMeccanico(int id) {
+    public List<FatturaDto> getFattureByIdMeccanico(long id) {
         List<Fattura> fatture = fatturaService.getFattureByIdMeccanico(id);
         return fatturaMappers.convertFromDomain(fatture);
     }
 
     @Override
-    public List<FatturaDto> getFattureByIdVeicolo(int id) {
+    public List<FatturaDto> getFattureByIdVeicolo(long id) {
         List<Fattura> fatture = fatturaService.getFattureByIdVeicolo(id);
         return fatturaMappers.convertFromDomain(fatture);
     }
 
     @Override
-    public void deleteFattura(int id) {
+    public void deleteFattura(long id) {
         fatturaService.deleteFattura(id);
     }
 
@@ -108,7 +108,7 @@ public class FatturaElementsEJBServiceImpl implements FatturaElementsEJBService 
     }
 
     @Override
-    public MeccanicoDto getMeccanicoById(int id) {
+    public MeccanicoDto getMeccanicoById(long id) {
         Meccanico meccanico = meccanicoService.getMeccanicoById(id);
         return meccanicoMappers.convertFromDomain(meccanico);
     }
@@ -120,13 +120,13 @@ public class FatturaElementsEJBServiceImpl implements FatturaElementsEJBService 
     }
 
     @Override
-    public void updateMeccanico(int id, MeccanicoDto meccanicoAgg) {
+    public void updateMeccanico(long id, MeccanicoDto meccanicoAgg) {
         Meccanico meccanico = meccanicoMappers.convertToDomain(meccanicoAgg);
         meccanicoService.updateMeccanico(id, meccanico);
     }
 
     @Override
-    public void deleteMeccanico(int id) {
+    public void deleteMeccanico(long id) {
         meccanicoService.deleteMeccanico(id);
     }
 
@@ -139,7 +139,7 @@ public class FatturaElementsEJBServiceImpl implements FatturaElementsEJBService 
     }
 
     @Override
-    public VeicoloDto getVeicoloById(int id) {
+    public VeicoloDto getVeicoloById(long id) {
         Veicolo veicolo = veicoloService.getVeicoloById(id);
         return veicoloMappers.convertFromDomain(veicolo);
     }
@@ -147,17 +147,23 @@ public class FatturaElementsEJBServiceImpl implements FatturaElementsEJBService 
     @Override
     public void createVeicolo(VeicoloDto veicoloDto) {
         Veicolo veicolo = veicoloMappers.convertToDomain(veicoloDto);
+        Cliente c = new Cliente();
+        c.setId(veicoloDto.getClienteDto().getId());
+        veicolo.setCliente(c);
         veicoloService.createVeicolo(veicolo);
     }
 
     @Override
-    public void updateVeicolo(int id, VeicoloDto veicoloAgg) {
+    public void updateVeicolo(long id, VeicoloDto veicoloAgg) {
         Veicolo veicolo = veicoloMappers.convertToDomain(veicoloAgg);
+        Cliente c = new Cliente();
+        c.setId(veicoloAgg.getClienteDto().getId());
+        veicolo.setCliente(c);
         veicoloService.updateVeicolo(id, veicolo);
     }
 
     @Override
-    public void deleteVeicolo(int id) {
+    public void deleteVeicolo(long id) {
         veicoloService.deleteVeicolo(id);
     }
 }

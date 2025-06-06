@@ -25,7 +25,7 @@ public class ClienteEJBServiceImpl implements ClienteEJBService {
     }
 
     @Override
-    public ClienteDto getClienteById(int id) {
+    public ClienteDto getClienteById(long id) {
         Cliente cliente = clienteService.getClienteById(id);
         return clienteMappers.convertFromDomain(cliente);
     }
@@ -37,13 +37,13 @@ public class ClienteEJBServiceImpl implements ClienteEJBService {
     }
 
     @Override
-    public void updateCliente(int id, ClienteDto clienteAgg) {
+    public void updateCliente(long id, ClienteDto clienteAgg) {
         Cliente cliente = clienteMappers.convertToDomain(clienteAgg);
         clienteService.updateCliente(id, cliente);
     }
 
     @Override
-    public void deleteCliente(int id) {
+    public void deleteCliente(long id) {
         clienteService.deleteCliente(id);
     }
 }

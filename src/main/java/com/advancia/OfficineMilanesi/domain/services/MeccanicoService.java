@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface MeccanicoService {
     List<Meccanico> getAllMeccanici();
-    Meccanico getMeccanicoById(int id);
+    Meccanico getMeccanicoById(long id);
     void createMeccanico(Meccanico meccanico);
-    void updateMeccanico(int id, Meccanico meccanicoAgg);
-    void deleteMeccanico(int id);
+    void updateMeccanico(long id, Meccanico meccanicoAgg);
+    void deleteMeccanico(long id);
 }

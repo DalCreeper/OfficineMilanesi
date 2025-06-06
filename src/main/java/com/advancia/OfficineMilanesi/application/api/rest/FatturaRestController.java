@@ -27,7 +27,7 @@ public class FatturaRestController {
 
     @GET
     @Path("/articoli/{id}")
-    public ArticoloDto getArticoloById(@PathParam("id") int id) {
+    public ArticoloDto getArticoloById(@PathParam("id") long id) {
         ArticoloDto articoloDto = fattElemService.getArticoloById(id);
         if(articoloDto == null) {
             throw new NotFoundException("Articolo con id " + id + " non trovato.");
@@ -44,14 +44,14 @@ public class FatturaRestController {
 
     @PUT
     @Path("/articoli/{id}")
-    public Response updateArticolo(@PathParam("id") int id, ArticoloDto articoloAgg) {
+    public Response updateArticolo(@PathParam("id") long id, ArticoloDto articoloAgg) {
         fattElemService.updateArticolo(id, articoloAgg);
         return Response.ok().build();
     }
 
     @DELETE
     @Path("/articoli/{id}")
-    public Response deleteArticolo(@PathParam("id") int id) {
+    public Response deleteArticolo(@PathParam("id") long id) {
         fattElemService.deleteArticolo(id);
         return Response.noContent().build();
     }
@@ -66,31 +66,31 @@ public class FatturaRestController {
 
     @GET
     @Path("/fatture/filiale/{id}")
-    public List<FatturaDto> getFattureByFiliale(@PathParam("id") int id) {
+    public List<FatturaDto> getFattureByFiliale(@PathParam("id") long id) {
         return fattElemService.getFattureByIdFiliale(id);
     }
 
     @GET
     @Path("/fatture/cliente/{id}")
-    public List<FatturaDto> getFattureByCliente(@PathParam("id") int id) {
+    public List<FatturaDto> getFattureByCliente(@PathParam("id") long id) {
         return fattElemService.getFattureByIdCliente(id);
     }
 
     @GET
     @Path("/fatture/meccanico/{id}")
-    public List<FatturaDto> getFattureByMeccanico(@PathParam("id") int id) {
+    public List<FatturaDto> getFattureByMeccanico(@PathParam("id") long id) {
         return fattElemService.getFattureByIdMeccanico(id);
     }
 
     @GET
     @Path("/fatture/veicolo/{id}")
-    public List<FatturaDto> getFattureByVeicolo(@PathParam("id") int id) {
+    public List<FatturaDto> getFattureByVeicolo(@PathParam("id") long id) {
         return fattElemService.getFattureByIdVeicolo(id);
     }
 
     @DELETE
     @Path("/fatture/{id}")
-    public Response deleteFattura(@PathParam("id") int id) {
+    public Response deleteFattura(@PathParam("id") long id) {
         fattElemService.deleteFattura(id);
         return Response.noContent().build();
     }
@@ -105,7 +105,7 @@ public class FatturaRestController {
 
     @GET
     @Path("/meccanici/{id}")
-    public MeccanicoDto getMeccanicoById(@PathParam("id") int id) {
+    public MeccanicoDto getMeccanicoById(@PathParam("id") long id) {
         MeccanicoDto meccanicoDto = fattElemService.getMeccanicoById(id);
         if(meccanicoDto == null) throw new NotFoundException("Meccanico con id " + id + " non trovato.");
         return meccanicoDto;
@@ -120,14 +120,14 @@ public class FatturaRestController {
 
     @PUT
     @Path("/meccanici/{id}")
-    public Response updateMeccanico(@PathParam("id") int id, MeccanicoDto meccanicoAgg) {
+    public Response updateMeccanico(@PathParam("id") long id, MeccanicoDto meccanicoAgg) {
         fattElemService.updateMeccanico(id, meccanicoAgg);
         return Response.ok().build();
     }
 
     @DELETE
     @Path("/meccanici/{id}")
-    public Response deleteMeccanico(@PathParam("id") int id) {
+    public Response deleteMeccanico(@PathParam("id") long id) {
         fattElemService.deleteMeccanico(id);
         return Response.noContent().build();
     }
@@ -142,7 +142,7 @@ public class FatturaRestController {
 
     @GET
     @Path("/veicoli/{id}")
-    public VeicoloDto getVeicoloById(@PathParam("id") int id) {
+    public VeicoloDto getVeicoloById(@PathParam("id") long id) {
         VeicoloDto veicoloDto = fattElemService.getVeicoloById(id);
         if(veicoloDto == null) throw new NotFoundException("Veicolo con id " + id + " non trovato.");
         return veicoloDto;
@@ -157,14 +157,14 @@ public class FatturaRestController {
 
     @PUT
     @Path("/veicoli/{id}")
-    public Response updateVeicolo(@PathParam("id") int id, VeicoloDto veicoloAgg) {
+    public Response updateVeicolo(@PathParam("id") long id, VeicoloDto veicoloAgg) {
         fattElemService.updateVeicolo(id, veicoloAgg);
         return Response.ok().build();
     }
 
     @DELETE
     @Path("/veicoli/{id}")
-    public Response deleteVeicolo(@PathParam("id") int id) {
+    public Response deleteVeicolo(@PathParam("id") long id) {
         fattElemService.deleteVeicolo(id);
         return Response.noContent().build();
     }

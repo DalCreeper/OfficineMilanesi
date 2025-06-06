@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface ArticoloService {
     List<Articolo> getAllArticoli();
-    Articolo getArticoloById(int id);
+    Articolo getArticoloById(long id);
     void createArticolo(Articolo articolo);
-    void updateArticolo(int id, Articolo articoloAgg);
-    void deleteArticolo(int id);
+    void updateArticolo(long id, Articolo articoloAgg);
+    void deleteArticolo(long id);
 }

@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class ClienteDto implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    private int id;
+    private long id;
     private String ragSociale;
     private String pIva;
     private String codFiscale;

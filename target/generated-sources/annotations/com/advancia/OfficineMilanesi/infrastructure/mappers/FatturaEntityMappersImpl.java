@@ -12,8 +12,8 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-06-05T15:14:58+0200",
-    comments = "version: 1.5.3.Final, compiler: javac, environment: Java 1.8.0_441 (Oracle Corporation)"
+    date = "2025-06-06T23:22:15+0200",
+    comments = "version: 1.5.3.Final, compiler: javac, environment: Java 1.8.0_202 (Oracle Corporation)"
 )
 public class FatturaEntityMappersImpl implements FatturaEntityMappers {
 
@@ -105,9 +105,6 @@ public class FatturaEntityMappersImpl implements FatturaEntityMappers {
 
         FatturaArticoloId fatturaArticoloId = new FatturaArticoloId();
 
-        fatturaArticoloId.setFattura( fatturaArticoloIdEntity.getFattura() );
-        fatturaArticoloId.setArticolo( fatturaArticoloIdEntity.getArticolo() );
-
         return fatturaArticoloId;
     }
 
@@ -118,9 +115,6 @@ public class FatturaEntityMappersImpl implements FatturaEntityMappers {
         }
 
         FatturaArticoloIdEntity fatturaArticoloIdEntity = new FatturaArticoloIdEntity();
-
-        fatturaArticoloIdEntity.setFattura( fatturaArticoloId.getFattura() );
-        fatturaArticoloIdEntity.setArticolo( fatturaArticoloId.getArticolo() );
 
         return fatturaArticoloIdEntity;
     }

@@ -22,7 +22,7 @@ public class MeccanicoDao {
         }
     }
 
-    public MeccanicoEntity getMeccanicoById(int id, EntityManager em) {
+    public MeccanicoEntity getMeccanicoById(long id, EntityManager em) {
         try {
             return em.createQuery(GET_MECCANICO_BY_ID, MeccanicoEntity.class).setParameter("id", id).getSingleResult();
         } catch(Exception e) {
@@ -38,7 +38,7 @@ public class MeccanicoDao {
         }
     }
 
-    public void updateMeccanico(int id, MeccanicoEntity m, EntityManager em) {
+    public void updateMeccanico(long id, MeccanicoEntity m, EntityManager em) {
         try {
             MeccanicoEntity existingMeccanicoEntity = em.find(MeccanicoEntity.class, id);
             if(existingMeccanicoEntity != null) {
@@ -57,7 +57,7 @@ public class MeccanicoDao {
         }
     }
 
-    public void deleteMeccanico(int id, EntityManager em) {
+    public void deleteMeccanico(long id, EntityManager em) {
         try {
             MeccanicoEntity meccanicoEntity = em.find(MeccanicoEntity.class, id);
             if(meccanicoEntity != null) {

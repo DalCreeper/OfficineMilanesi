@@ -22,7 +22,7 @@ public class FilialeDao {
         }
     }
 
-    public FilialeEntity getFilialeById(int id, EntityManager em) {
+    public FilialeEntity getFilialeById(long id, EntityManager em) {
         try {
             return em.createQuery(GET_FILIALE_BY_ID, FilialeEntity.class).setParameter("id", id).getSingleResult();
         } catch(Exception e) {
@@ -38,7 +38,7 @@ public class FilialeDao {
         }
     }
 
-    public void updateFiliale(int id, FilialeEntity f, EntityManager em) {
+    public void updateFiliale(long id, FilialeEntity f, EntityManager em) {
         try {
             FilialeEntity existingFilialeEntity = em.find(FilialeEntity.class, id);
             if(existingFilialeEntity != null) {
@@ -64,7 +64,7 @@ public class FilialeDao {
         }
     }
 
-    public void deleteFiliale(int id, EntityManager em) {
+    public void deleteFiliale(long id, EntityManager em) {
         try {
             FilialeEntity filialeEntity = em.find(FilialeEntity.class, id);
             if(filialeEntity != null) {

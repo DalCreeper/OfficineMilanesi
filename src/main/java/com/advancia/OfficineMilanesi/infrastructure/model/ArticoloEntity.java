@@ -3,6 +3,7 @@ package com.advancia.OfficineMilanesi.infrastructure.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -10,14 +11,16 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Table(name = "ARTICOLI")
+@Table(name = "ARTICOLI", schema = "OFFMILANESI")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString(exclude = {"fatture"})
 public class ArticoloEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "articolo_seq")
+    @SequenceGenerator(name = "articolo_seq", sequenceName = "ID_ARTICOLO", allocationSize = 1)
     @Column(name = "ID")
     private Long id;
 
@@ -43,5 +46,5 @@ public class ArticoloEntity {
     private LocalDate dataAgg;
 
     @OneToMany(mappedBy = "articoloEntity")
-    private List<FatturaArticoloEntity> fattureArticolo;
+    private List<FatturaArticoloEntity> fatture;
 }

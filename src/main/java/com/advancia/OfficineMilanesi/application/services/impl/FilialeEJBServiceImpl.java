@@ -25,7 +25,7 @@ public class FilialeEJBServiceImpl implements FilialeEJBService {
     }
 
     @Override
-    public FilialeDto getFilialeById(int id) {
+    public FilialeDto getFilialeById(long id) {
         Filiale filiale = filialeService.getFilialeById(id);
         return filialeMappers.convertFromDomain(filiale);
     }
@@ -37,13 +37,13 @@ public class FilialeEJBServiceImpl implements FilialeEJBService {
     }
 
     @Override
-    public void updateFiliale(int id, FilialeDto filialeAgg) {
+    public void updateFiliale(long id, FilialeDto filialeAgg) {
         Filiale filiale = filialeMappers.convertToDomain(filialeAgg);
         filialeService.updateFiliale(id, filiale);
     }
 
     @Override
-    public void deleteFiliale(int id) {
+    public void deleteFiliale(long id) {
         filialeService.deleteFiliale(id);
     }
 }

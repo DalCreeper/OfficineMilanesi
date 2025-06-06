@@ -19,7 +19,7 @@ public class VeicoloServiceImpl implements VeicoloService {
     }
 
     @Override
-    public Veicolo getVeicoloById(int id) {
+    public Veicolo getVeicoloById(long id) {
         return veicoloDaoService.getVeicoloById(id);
     }
 
@@ -29,12 +29,12 @@ public class VeicoloServiceImpl implements VeicoloService {
     }
 
     @Override
-    public void updateVeicolo(int id, Veicolo veicoloAgg) {
+    public void updateVeicolo(long id, Veicolo veicoloAgg) {
         veicoloDaoService.updateVeicolo(id, veicoloAgg);
     }
 
     @Override
-    public void deleteVeicolo(int id) {
+    public void deleteVeicolo(long id) {
         veicoloDaoService.deleteVeicolo(id);
     }
 }

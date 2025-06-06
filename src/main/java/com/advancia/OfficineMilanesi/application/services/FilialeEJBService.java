@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface FilialeEJBService {
     List<FilialeDto> getAllFiliali();
-    FilialeDto getFilialeById(int id);
+    FilialeDto getFilialeById(long id);
     void createFiliale(FilialeDto filialeDto);
-    void updateFiliale(int id, FilialeDto filialeAgg);
-    void deleteFiliale(int id);
+    void updateFiliale(long id, FilialeDto filialeAgg);
+    void deleteFiliale(long id);
 }

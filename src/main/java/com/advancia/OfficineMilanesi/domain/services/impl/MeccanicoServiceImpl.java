@@ -19,7 +19,7 @@ public class MeccanicoServiceImpl implements MeccanicoService {
     }
 
     @Override
-    public Meccanico getMeccanicoById(int id) {
+    public Meccanico getMeccanicoById(long id) {
         return meccanicoDaoService.getMeccanicoById(id);
     }
 
@@ -29,12 +29,12 @@ public class MeccanicoServiceImpl implements MeccanicoService {
     }
 
     @Override
-    public void updateMeccanico(int id, Meccanico meccanicoAgg) {
+    public void updateMeccanico(long id, Meccanico meccanicoAgg) {
         meccanicoDaoService.updateMeccanico(id, meccanicoAgg);
     }
 
     @Override
-    public void deleteMeccanico(int id) {
+    public void deleteMeccanico(long id) {
         meccanicoDaoService.deleteMeccanico(id);
     }
 }

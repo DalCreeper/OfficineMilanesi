@@ -19,27 +19,27 @@ public class FatturaServiceimpl implements FatturaService {
     }
 
     @Override
-    public List<Fattura> getFattureByIdFiliale(int id) {
+    public List<Fattura> getFattureByIdFiliale(long id) {
         return fatturaDaoService.getFattureByIdFiliale(id);
     }
 
     @Override
-    public List<Fattura> getFattureByIdCliente(int id) {
+    public List<Fattura> getFattureByIdCliente(long id) {
         return fatturaDaoService.getFattureByIdCliente(id);
     }
 
     @Override
-    public List<Fattura> getFattureByIdMeccanico(int id) {
+    public List<Fattura> getFattureByIdMeccanico(long id) {
         return fatturaDaoService.getFattureByIdMeccanico(id);
     }
 
     @Override
-    public List<Fattura> getFattureByIdVeicolo(int id) {
+    public List<Fattura> getFattureByIdVeicolo(long id) {
         return fatturaDaoService.getFattureByIdVeicolo(id);
     }
 
     @Override
-    public void deleteFattura(int id) {
+    public void deleteFattura(long id) {
         fatturaDaoService.deleteFattura(id);
     }
 }

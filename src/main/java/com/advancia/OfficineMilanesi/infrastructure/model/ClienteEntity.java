@@ -3,6 +3,7 @@ package com.advancia.OfficineMilanesi.infrastructure.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -10,17 +11,19 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Table(name = "CLIENTI")
+@Table(name = "CLIENTI", schema = "OFFMILANESI")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString(exclude = {"fatture", "veicoli"})
 public class ClienteEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "cliente_seq")
+    @SequenceGenerator(name = "cliente_seq", sequenceName = "ID_CLIENTE", allocationSize = 1)
     @Column(name = "ID")
-    private int id;
+    private long id;
 
     @Column(name = "RAG_SOCIALE")
     private String ragSociale;
@@ -59,7 +62,7 @@ public class ClienteEntity implements Serializable {
     private LocalDate dataAgg;
 
     @OneToMany(mappedBy = "clienteEntity")
-    private List<FatturaEntity> listaFatture;
+    private List<FatturaEntity> fatture;
 
     @OneToMany(mappedBy = "clienteEntity")
     private List<VeicoloEntity> veicoli;

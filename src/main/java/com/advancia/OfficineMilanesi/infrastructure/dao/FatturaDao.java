@@ -20,25 +20,25 @@ public class FatturaDao {
                                                           + "JOIN FETCH f.clienteEntity "
                                                           + "JOIN FETCH f.meccanicoEntity "
                                                           + "JOIN FETCH f.veicoloEntity "
-                                                          + "WHERE f.filialeEntity = :id";
+                                                          + "WHERE f.filialeEntity.id = :id";
     private static final String GET_FATTURE_BY_ID_CLIENTE = "SELECT f FROM FatturaEntity f "
                                                           + "JOIN FETCH f.filialeEntity "
                                                           + "JOIN FETCH f.clienteEntity "
                                                           + "JOIN FETCH f.meccanicoEntity "
                                                           + "JOIN FETCH f.veicoloEntity "
-                                                          + "WHERE f.clienteEntity = :id";
+                                                          + "WHERE f.clienteEntity.id = :id";
     private static final String GET_FATTURE_BY_ID_MECCANICO = "SELECT f FROM FatturaEntity f "
                                                           + "JOIN FETCH f.filialeEntity "
                                                           + "JOIN FETCH f.clienteEntity "
                                                           + "JOIN FETCH f.meccanicoEntity "
                                                           + "JOIN FETCH f.veicoloEntity "
-                                                          + "WHERE f.meccanicoEntity = :id";
+                                                          + "WHERE f.meccanicoEntity.id = :id";
     private static final String GET_FATTURE_BY_ID_VEICOLO = "SELECT f FROM FatturaEntity f "
                                                           + "JOIN FETCH f.filialeEntity "
                                                           + "JOIN FETCH f.clienteEntity "
                                                           + "JOIN FETCH f.meccanicoEntity "
                                                           + "JOIN FETCH f.veicoloEntity "
-                                                          + "WHERE f.veicoloEntity = :id";
+                                                          + "WHERE f.veicoloEntity.id = :id";
 
     public List<FatturaEntity> getFatture(EntityManager em) {
         try {
@@ -49,7 +49,7 @@ public class FatturaDao {
         }
     }
 
-    public List<FatturaEntity> getFattureByIdFiliale(int id, EntityManager em) {
+    public List<FatturaEntity> getFattureByIdFiliale(long id, EntityManager em) {
         try {
             TypedQuery<FatturaEntity> query = em.createQuery(GET_FATTURE_BY_ID_FILIALE, FatturaEntity.class).setParameter("id", id);
             return query.getResultList();
@@ -58,7 +58,7 @@ public class FatturaDao {
         }
     }
 
-    public List<FatturaEntity> getFattureByIdCliente(int id, EntityManager em) {
+    public List<FatturaEntity> getFattureByIdCliente(long id, EntityManager em) {
         try {
             TypedQuery<FatturaEntity> query = em.createQuery(GET_FATTURE_BY_ID_CLIENTE, FatturaEntity.class).setParameter("id", id);
             return query.getResultList();
@@ -67,7 +67,7 @@ public class FatturaDao {
         }
     }
 
-    public List<FatturaEntity> getFattureByIdMeccanico(int id, EntityManager em) {
+    public List<FatturaEntity> getFattureByIdMeccanico(long id, EntityManager em) {
         try {
             TypedQuery<FatturaEntity> query = em.createQuery(GET_FATTURE_BY_ID_MECCANICO, FatturaEntity.class).setParameter("id", id);
             return query.getResultList();
@@ -76,7 +76,7 @@ public class FatturaDao {
         }
     }
 
-    public List<FatturaEntity> getFattureByIdVeicolo(int id, EntityManager em) {
+    public List<FatturaEntity> getFattureByIdVeicolo(long id, EntityManager em) {
         try {
             TypedQuery<FatturaEntity> query = em.createQuery(GET_FATTURE_BY_ID_VEICOLO, FatturaEntity.class).setParameter("id", id);
             return query.getResultList();
@@ -85,7 +85,7 @@ public class FatturaDao {
         }
     }
 
-    public void deleteFattura(int id, EntityManager em) {
+    public void deleteFattura(long id, EntityManager em) {
         try {
             FatturaEntity fatturaEntity = em.find(FatturaEntity.class, id);
             if(fatturaEntity != null) {

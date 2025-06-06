@@ -9,27 +9,27 @@ import java.util.List;
 
 public interface FatturaElementsEJBService {
     List<ArticoloDto> getAllArticoli();
-    ArticoloDto getArticoloById(int id);
+    ArticoloDto getArticoloById(long id);
     void createArticolo(ArticoloDto articoloDto);
-    void updateArticolo(int id, ArticoloDto articoloAgg);
-    void deleteArticolo(int id);
+    void updateArticolo(long id, ArticoloDto articoloAgg);
+    void deleteArticolo(long id);
     /* -------------------------------------------------------------------------------------------------------------- */
     List<FatturaDto> getFatture();
-    List<FatturaDto> getFattureByIdFiliale(int id);
-    List<FatturaDto> getFattureByIdCliente(int id);
-    List<FatturaDto> getFattureByIdMeccanico(int id);
-    List<FatturaDto> getFattureByIdVeicolo(int id);
-    void deleteFattura(int id);
+    List<FatturaDto> getFattureByIdFiliale(long id);
+    List<FatturaDto> getFattureByIdCliente(long id);
+    List<FatturaDto> getFattureByIdMeccanico(long id);
+    List<FatturaDto> getFattureByIdVeicolo(long id);
+    void deleteFattura(long id);
     /* -------------------------------------------------------------------------------------------------------------- */
     List<MeccanicoDto> getAllMeccanici();
-    MeccanicoDto getMeccanicoById(int id);
+    MeccanicoDto getMeccanicoById(long id);
     void createMeccanico(MeccanicoDto meccanicoDto);
-    void updateMeccanico(int id, MeccanicoDto meccanicoAgg);
-    void deleteMeccanico(int id);
+    void updateMeccanico(long id, MeccanicoDto meccanicoAgg);
+    void deleteMeccanico(long id);
     /* -------------------------------------------------------------------------------------------------------------- */
     List<VeicoloDto> getAllVeicoli();
-    VeicoloDto getVeicoloById(int id);
+    VeicoloDto getVeicoloById(long id);
     void createVeicolo(VeicoloDto veicoloDto);
-    void updateVeicolo(int id, VeicoloDto veicoloAgg);
-    void deleteVeicolo(int id);
+    void updateVeicolo(long id, VeicoloDto veicoloAgg);
+    void deleteVeicolo(long id);
 }

@@ -24,7 +24,7 @@ public class ClienteRestController {
 
     @GET
     @Path("/{id}")
-    public ClienteDto getClienteById(@PathParam("id") int id) {
+    public ClienteDto getClienteById(@PathParam("id") long id) {
         ClienteDto clienteDto = ClienteService.getClienteById(id);
         if(clienteDto == null) throw new NotFoundException("Cliente con id " + id + " non trovato.");
         return clienteDto;
@@ -38,14 +38,14 @@ public class ClienteRestController {
 
     @PUT
     @Path("/{id}")
-    public Response updateCliente(@PathParam("id") int id, ClienteDto clienteAgg) {
+    public Response updateCliente(@PathParam("id") long id, ClienteDto clienteAgg) {
         ClienteService.updateCliente(id, clienteAgg);
         return Response.ok().build();
     }
 
     @DELETE
     @Path("/{id}")
-    public Response deleteCliente(@PathParam("id") int id) {
+    public Response deleteCliente(@PathParam("id") long id) {
         ClienteService.deleteCliente(id);
         return Response.noContent().build();
     }

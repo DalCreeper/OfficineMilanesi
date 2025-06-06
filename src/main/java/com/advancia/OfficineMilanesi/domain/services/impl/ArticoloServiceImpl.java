@@ -19,7 +19,7 @@ public class ArticoloServiceImpl implements ArticoloService {
     }
 
     @Override
-    public Articolo getArticoloById(int id) {
+    public Articolo getArticoloById(long id) {
         return articoloDaoService.getArticoloById(id);
     }
 
@@ -29,12 +29,12 @@ public class ArticoloServiceImpl implements ArticoloService {
     }
 
     @Override
-    public void updateArticolo(int id, Articolo articoloAgg) {
+    public void updateArticolo(long id, Articolo articoloAgg) {
         articoloDaoService.updateArticolo(id, articoloAgg);
     }
 
     @Override
-    public void deleteArticolo(int id) {
+    public void deleteArticolo(long id) {
         articoloDaoService.deleteArticolo(id);
     }
 }

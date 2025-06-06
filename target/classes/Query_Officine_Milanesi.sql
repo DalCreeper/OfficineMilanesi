@@ -121,50 +121,50 @@ CREATE TABLE LOG (
 );
 
 -- Insert
-INSERT INTO FILIALI (rag_sociale, p_iva, cod_fiscale, pec, telefono, indirizzo, cap, provincia, citta, nazione, nome_officina, data_ins, data_agg) VALUES ('OFFICINA MECCANICA ALFA SRL', '12345678901', '12345678901', 'alfa@pec.it', '0123 456789', 'Via Roma 100', '00100', 'RM', 'Roma', 'Italia', 'Officina Alfa', SYSDATE, SYSDATE);
+INSERT INTO FILIALI (id, rag_sociale, p_iva, cod_fiscale, pec, telefono, indirizzo, cap, provincia, citta, nazione, nome_officina, data_ins, data_agg) VALUES (id_filiale.nextval, 'OFFICINA MECCANICA ALFA SRL', '12345678901', '12345678901', 'alfa@pec.it', '0123 456789', 'Via Roma 100', '00100', 'RM', 'Roma', 'Italia', 'Officina Alfa', SYSDATE, SYSDATE);
 
-INSERT INTO CLIENTI (rag_sociale, p_iva, cod_fiscale, pec, telefono, indirizzo, cap, provincia, citta, nazione, data_ins, data_agg) VALUES ('Mario Rossi', '12345670158', 'RSSMRA80A01H501Z', 'mario.rossi@pec.it', '3331234567', 'Via Milano 10', '20100', 'MI', 'Milano', 'Italia', SYSDATE, SYSDATE);
-INSERT INTO CLIENTI (rag_sociale, p_iva, cod_fiscale, pec, telefono, indirizzo, cap, provincia, citta, nazione, data_ins, data_agg) VALUES ('Giulia Bianchi', NULL, 'BNCGLI85C41F205Z', 'giulia.bianchi@pec.it', '3399876543', 'Via Torino 20', '10100', 'TO', 'Torino', 'Italia', SYSDATE, SYSDATE);
-INSERT INTO CLIENTI (rag_sociale, p_iva, cod_fiscale, pec, telefono, indirizzo, cap, provincia, citta, nazione, data_ins, data_agg) VALUES ('Andrea Verdi', '23456780269', 'VRDNDR90A01H501A', 'andrea.verdi@pec.it', '3401111222', 'Via Firenze 5', '50100', 'FI', 'Firenze', 'Italia', SYSDATE, SYSDATE);
-INSERT INTO CLIENTI (rag_sociale, p_iva, cod_fiscale, pec, telefono, indirizzo, cap, provincia, citta, nazione, data_ins, data_agg) VALUES ('Lucia Neri', '34567890370', 'NRILCU75H60H501W', 'lucia.neri@pec.it', '3488888888', 'Via Napoli 55', '80100', 'NA', 'Napoli', 'Italia', SYSDATE, SYSDATE);
-INSERT INTO CLIENTI (rag_sociale, p_iva, cod_fiscale, pec, telefono, indirizzo, cap, provincia, citta, nazione, data_ins, data_agg) VALUES ('Marco Gialli', NULL, 'GLLMRC70D10H703Y', 'marco.gialli@pec.it', '3457776666', 'Via Bari 22', '70100', 'BA', 'Bari', 'Italia', SYSDATE, SYSDATE);
+INSERT INTO CLIENTI (id, rag_sociale, p_iva, cod_fiscale, pec, telefono, indirizzo, cap, provincia, citta, nazione, data_ins, data_agg) VALUES (id_cliente.nextval, 'Mario Rossi', '12345670158', 'RSSMRA80A01H501Z', 'mario.rossi@pec.it', '3331234567', 'Via Milano 10', '20100', 'MI', 'Milano', 'Italia', SYSDATE, SYSDATE);
+INSERT INTO CLIENTI (id, rag_sociale, p_iva, cod_fiscale, pec, telefono, indirizzo, cap, provincia, citta, nazione, data_ins, data_agg) VALUES (id_cliente.nextval, 'Giulia Bianchi', NULL, 'BNCGLI85C41F205Z', 'giulia.bianchi@pec.it', '3399876543', 'Via Torino 20', '10100', 'TO', 'Torino', 'Italia', SYSDATE, SYSDATE);
+INSERT INTO CLIENTI (id, rag_sociale, p_iva, cod_fiscale, pec, telefono, indirizzo, cap, provincia, citta, nazione, data_ins, data_agg) VALUES (id_cliente.nextval, 'Andrea Verdi', '23456780269', 'VRDNDR90A01H501A', 'andrea.verdi@pec.it', '3401111222', 'Via Firenze 5', '50100', 'FI', 'Firenze', 'Italia', SYSDATE, SYSDATE);
+INSERT INTO CLIENTI (id, rag_sociale, p_iva, cod_fiscale, pec, telefono, indirizzo, cap, provincia, citta, nazione, data_ins, data_agg) VALUES (id_cliente.nextval, 'Lucia Neri', '34567890370', 'NRILCU75H60H501W', 'lucia.neri@pec.it', '3488888888', 'Via Napoli 55', '80100', 'NA', 'Napoli', 'Italia', SYSDATE, SYSDATE);
+INSERT INTO CLIENTI (id, rag_sociale, p_iva, cod_fiscale, pec, telefono, indirizzo, cap, provincia, citta, nazione, data_ins, data_agg) VALUES (id_cliente.nextval, 'Marco Gialli', NULL, 'GLLMRC70D10H703Y', 'marco.gialli@pec.it', '3457776666', 'Via Bari 22', '70100', 'BA', 'Bari', 'Italia', SYSDATE, SYSDATE);
 
-INSERT INTO MECCANICI (nome, cognome, cod_fiscale, telefono, data_ins, data_agg) VALUES ('Luca', 'Ferrari', 'FRRLCC85A01H501R', '3291112222', SYSDATE, SYSDATE);
-INSERT INTO MECCANICI (nome, cognome, cod_fiscale, telefono, data_ins, data_agg) VALUES ('Davide', 'Russo', 'RSSDVD82B03H501Y', '3283334444', SYSDATE, SYSDATE);
-INSERT INTO MECCANICI (nome, cognome, cod_fiscale, telefono, data_ins, data_agg) VALUES ('Chiara', 'Conti', 'CNTCHR90C45F205E', '3275556666', SYSDATE, SYSDATE);
-INSERT INTO MECCANICI (nome, cognome, cod_fiscale, telefono, data_ins, data_agg) VALUES ('Simone', 'Greco', 'GRCSMN78D16H501P', '3267778888', SYSDATE, SYSDATE);
+INSERT INTO MECCANICI (id, nome, cognome, cod_fiscale, telefono, data_ins, data_agg) VALUES (id_meccanico.nextval, 'Luca', 'Ferrari', 'FRRLCC85A01H501R', '3291112222', SYSDATE, SYSDATE);
+INSERT INTO MECCANICI (id, nome, cognome, cod_fiscale, telefono, data_ins, data_agg) VALUES (id_meccanico.nextval, 'Davide', 'Russo', 'RSSDVD82B03H501Y', '3283334444', SYSDATE, SYSDATE);
+INSERT INTO MECCANICI (id, nome, cognome, cod_fiscale, telefono, data_ins, data_agg) VALUES (id_meccanico.nextval, 'Chiara', 'Conti', 'CNTCHR90C45F205E', '3275556666', SYSDATE, SYSDATE);
+INSERT INTO MECCANICI (id, nome, cognome, cod_fiscale, telefono, data_ins, data_agg) VALUES (id_meccanico.nextval, 'Simone', 'Greco', 'GRCSMN78D16H501P', '3267778888', SYSDATE, SYSDATE);
 
-INSERT INTO VEICOLI (modello_vett, telaio, targa, motore, cilindrata, data_immatr, data_vendita, stato, km_percorsi, id_cliente, data_ins, data_agg) VALUES ('Fiat Panda', 'ZFA12345678901234', 'AB123CD', '169A4000', 1242, TO_DATE('2018-06-12','YYYY-MM-DD'), NULL, 'Accettazione', 85000, 1, SYSDATE, SYSDATE);
-INSERT INTO VEICOLI (modello_vett, telaio, targa, motore, cilindrata, data_immatr, data_vendita, stato, km_percorsi, id_cliente, data_ins, data_agg) VALUES ('Opel Corsa', 'W0L0XCF0821234567', 'CD456EF', 'Z13DT', 1248, TO_DATE('2016-04-10','YYYY-MM-DD'), TO_DATE('2023-09-18','YYYY-MM-DD'), 'Diagnosi', 95000, 2, SYSDATE, SYSDATE);
-INSERT INTO VEICOLI (modello_vett, telaio, targa, motore, cilindrata, data_immatr, data_vendita, stato, km_percorsi, id_cliente, data_ins, data_agg) VALUES ('Renault Clio', 'VF1BB054632345678', 'EF789GH', 'K9K', 1461, TO_DATE('2020-03-25','YYYY-MM-DD'), NULL, 'Riparazione', 72000, 3, SYSDATE, SYSDATE);
-INSERT INTO VEICOLI (modello_vett, telaio, targa, motore, cilindrata, data_immatr, data_vendita, stato, km_percorsi, id_cliente, data_ins, data_agg) VALUES ('Ford Fiesta', 'WF0DXXGAJD7L12345', 'GH012IJ', 'F6JD', 998, TO_DATE('2017-11-09','YYYY-MM-DD'), TO_DATE('2022-02-15','YYYY-MM-DD'), 'Collaudo', 40000, 4, SYSDATE, SYSDATE);
-INSERT INTO VEICOLI (modello_vett, telaio, targa, motore, cilindrata, data_immatr, data_vendita, stato, km_percorsi, id_cliente, data_ins, data_agg) VALUES ('Volkswagen Polo', 'WVWZZZ6RZHY123456', 'IJ345KL', 'CHZ', 1197, TO_DATE('2015-07-01','YYYY-MM-DD'), NULL, 'Diagnosi', 20000, 5, SYSDATE, SYSDATE);
-INSERT INTO VEICOLI (modello_vett, telaio, targa, motore, cilindrata, data_immatr, data_vendita, stato, km_percorsi, id_cliente, data_ins, data_agg) VALUES ('Toyota Yaris', 'VNKKC3D320A123456', 'KL678MN', '1KR-FE', 998, TO_DATE('2013-02-11','YYYY-MM-DD'), TO_DATE('2021-06-20','YYYY-MM-DD'), 'Consegna', 102000, 1, SYSDATE, SYSDATE);
-INSERT INTO VEICOLI (modello_vett, telaio, targa, motore, cilindrata, data_immatr, data_vendita, stato, km_percorsi, id_cliente, data_ins, data_agg) VALUES ('Peugeot 208', 'VF3CC8HR0GT123456', 'MN901OP', 'DV6FC', 1560, TO_DATE('2019-10-30','YYYY-MM-DD'), NULL, 'Consegna', 130000, 2, SYSDATE, SYSDATE);
-INSERT INTO VEICOLI (modello_vett, telaio, targa, motore, cilindrata, data_immatr, data_vendita, stato, km_percorsi, id_cliente, data_ins, data_agg) VALUES ('Hyundai i20', 'NLHBB51BADZ123456', 'OP234QR', 'G4LA', 1248, TO_DATE('2012-05-17','YYYY-MM-DD'), TO_DATE('2020-08-03','YYYY-MM-DD'), 'Collaudo', 140000, 3, SYSDATE, SYSDATE);
-INSERT INTO VEICOLI (modello_vett, telaio, targa, motore, cilindrata, data_immatr, data_vendita, stato, km_percorsi, id_cliente, data_ins, data_agg) VALUES ('Citroen C3', 'VF7FCKFVC12345678', 'QR567ST', 'TU3JP', 1360, TO_DATE('2014-09-19','YYYY-MM-DD'), NULL, 'Diagnosi', 160000, 4, SYSDATE, SYSDATE);
-INSERT INTO VEICOLI (modello_vett, telaio, targa, motore, cilindrata, data_immatr, data_vendita, stato, km_percorsi, id_cliente, data_ins, data_agg) VALUES ('Seat Ibiza', 'VSSZZZ6JZAR123456', 'ST890UV', 'BXW', 1198, TO_DATE('2023-01-15','YYYY-MM-DD'), NULL, 'Consegna', 10000, 5, SYSDATE, SYSDATE);
+INSERT INTO VEICOLI (id, modello_vett, telaio, targa, motore, cilindrata, data_immatr, data_vendita, stato, km_percorsi, id_cliente, data_ins, data_agg) VALUES (id_veicolo.nextval, 'Fiat Panda', 'ZFA12345678901234', 'AB123CD', '169A4000', 1242, TO_DATE('2018-06-12','YYYY-MM-DD'), NULL, 'Accettazione', 85000, 1, SYSDATE, SYSDATE);
+INSERT INTO VEICOLI (id, modello_vett, telaio, targa, motore, cilindrata, data_immatr, data_vendita, stato, km_percorsi, id_cliente, data_ins, data_agg) VALUES (id_veicolo.nextval, 'Opel Corsa', 'W0L0XCF0821234567', 'CD456EF', 'Z13DT', 1248, TO_DATE('2016-04-10','YYYY-MM-DD'), TO_DATE('2023-09-18','YYYY-MM-DD'), 'Diagnosi', 95000, 2, SYSDATE, SYSDATE);
+INSERT INTO VEICOLI (id, modello_vett, telaio, targa, motore, cilindrata, data_immatr, data_vendita, stato, km_percorsi, id_cliente, data_ins, data_agg) VALUES (id_veicolo.nextval, 'Renault Clio', 'VF1BB054632345678', 'EF789GH', 'K9K', 1461, TO_DATE('2020-03-25','YYYY-MM-DD'), NULL, 'Riparazione', 72000, 3, SYSDATE, SYSDATE);
+INSERT INTO VEICOLI (id, modello_vett, telaio, targa, motore, cilindrata, data_immatr, data_vendita, stato, km_percorsi, id_cliente, data_ins, data_agg) VALUES (id_veicolo.nextval, 'Ford Fiesta', 'WF0DXXGAJD7L12345', 'GH012IJ', 'F6JD', 998, TO_DATE('2017-11-09','YYYY-MM-DD'), TO_DATE('2022-02-15','YYYY-MM-DD'), 'Collaudo', 40000, 4, SYSDATE, SYSDATE);
+INSERT INTO VEICOLI (id, modello_vett, telaio, targa, motore, cilindrata, data_immatr, data_vendita, stato, km_percorsi, id_cliente, data_ins, data_agg) VALUES (id_veicolo.nextval, 'Volkswagen Polo', 'WVWZZZ6RZHY123456', 'IJ345KL', 'CHZ', 1197, TO_DATE('2015-07-01','YYYY-MM-DD'), NULL, 'Diagnosi', 20000, 5, SYSDATE, SYSDATE);
+INSERT INTO VEICOLI (id, modello_vett, telaio, targa, motore, cilindrata, data_immatr, data_vendita, stato, km_percorsi, id_cliente, data_ins, data_agg) VALUES (id_veicolo.nextval, 'Toyota Yaris', 'VNKKC3D320A123456', 'KL678MN', '1KR-FE', 998, TO_DATE('2013-02-11','YYYY-MM-DD'), TO_DATE('2021-06-20','YYYY-MM-DD'), 'Consegna', 102000, 1, SYSDATE, SYSDATE);
+INSERT INTO VEICOLI (id, modello_vett, telaio, targa, motore, cilindrata, data_immatr, data_vendita, stato, km_percorsi, id_cliente, data_ins, data_agg) VALUES (id_veicolo.nextval, 'Peugeot 208', 'VF3CC8HR0GT123456', 'MN901OP', 'DV6FC', 1560, TO_DATE('2019-10-30','YYYY-MM-DD'), NULL, 'Consegna', 130000, 2, SYSDATE, SYSDATE);
+INSERT INTO VEICOLI (id, modello_vett, telaio, targa, motore, cilindrata, data_immatr, data_vendita, stato, km_percorsi, id_cliente, data_ins, data_agg) VALUES (id_veicolo.nextval, 'Hyundai i20', 'NLHBB51BADZ123456', 'OP234QR', 'G4LA', 1248, TO_DATE('2012-05-17','YYYY-MM-DD'), TO_DATE('2020-08-03','YYYY-MM-DD'), 'Collaudo', 140000, 3, SYSDATE, SYSDATE);
+INSERT INTO VEICOLI (id, modello_vett, telaio, targa, motore, cilindrata, data_immatr, data_vendita, stato, km_percorsi, id_cliente, data_ins, data_agg) VALUES (id_veicolo.nextval, 'Citroen C3', 'VF7FCKFVC12345678', 'QR567ST', 'TU3JP', 1360, TO_DATE('2014-09-19','YYYY-MM-DD'), NULL, 'Diagnosi', 160000, 4, SYSDATE, SYSDATE);
+INSERT INTO VEICOLI (id, modello_vett, telaio, targa, motore, cilindrata, data_immatr, data_vendita, stato, km_percorsi, id_cliente, data_ins, data_agg) VALUES (id_veicolo.nextval, 'Seat Ibiza', 'VSSZZZ6JZAR123456', 'ST890UV', 'BXW', 1198, TO_DATE('2023-01-15','YYYY-MM-DD'), NULL, 'Consegna', 10000, 5, SYSDATE, SYSDATE);
 
-INSERT INTO ARTICOLI (pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES ('A1', '$$', 'R001', 'Cambio olio motore', 50.00, SYSDATE, SYSDATE);
-INSERT INTO ARTICOLI (pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES ('A2', 'SG', 'R002', 'Filtro olio', 15.00, SYSDATE, SYSDATE);
-INSERT INTO ARTICOLI (pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES ('A3', 'MQ', 'R003', 'Filtro aria', 18.00, SYSDATE, SYSDATE);
-INSERT INTO ARTICOLI (pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES ('A4', 'YA', 'R004', 'Filtro abitacolo', 20.00, SYSDATE, SYSDATE);
-INSERT INTO ARTICOLI (pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES ('B1', '$$', 'S001', 'Manodopera generale', 40.00, SYSDATE, SYSDATE);
-INSERT INTO ARTICOLI (pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES ('B2', '$$', 'S002', 'Diagnosi centralina', 35.00, SYSDATE, SYSDATE);
-INSERT INTO ARTICOLI (pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES ('C1', 'YA', 'R005', 'Pastiglie freni anteriori', 45.00, SYSDATE, SYSDATE);
-INSERT INTO ARTICOLI (pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES ('C2', 'SG', 'R006', 'Dischi freno anteriori', 90.00, SYSDATE, SYSDATE);
-INSERT INTO ARTICOLI (pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES ('C3', 'MQ', 'R007', 'Batteria 60Ah', 85.00, SYSDATE, SYSDATE);
-INSERT INTO ARTICOLI (pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES ('C4', 'SG', 'R008', 'Candele accensione (4pz)', 30.00, SYSDATE, SYSDATE);
-INSERT INTO ARTICOLI (pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES ('D1', 'YA', 'R009', 'Lampadina H7', 8.00, SYSDATE, SYSDATE);
-INSERT INTO ARTICOLI (pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES ('D2', 'SG', 'R010', 'Tergicristallo anteriore', 25.00, SYSDATE, SYSDATE);
-INSERT INTO ARTICOLI (pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES ('D3', 'MQ', 'R011', 'Tergicristallo posteriore', 15.00, SYSDATE, SYSDATE);
-INSERT INTO ARTICOLI (pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES ('E1', 'YA', 'R012', 'Liquido freni DOT4', 10.00, SYSDATE, SYSDATE);
-INSERT INTO ARTICOLI (pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES ('E2', 'YA', 'R013', 'Antigelo radiatore', 12.00, SYSDATE, SYSDATE);
-INSERT INTO ARTICOLI (pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES ('F1', '$$', 'R014', 'Pulizia iniettori', 60.00, SYSDATE, SYSDATE);
-INSERT INTO ARTICOLI (pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES ('F2', 'MQ', 'R015', 'Additivo diesel', 14.00, SYSDATE, SYSDATE);
-INSERT INTO ARTICOLI (pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES ('G1', '$$', 'S003', 'Montaggio pneumatici', 25.00, SYSDATE, SYSDATE);
-INSERT INTO ARTICOLI (pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES ('G2', '$$', 'S004', 'Equilibratura ruote', 20.00, SYSDATE, SYSDATE);
-INSERT INTO ARTICOLI (pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES ('G3', '$$', 'S005', 'Controllo livelli', 10.00, SYSDATE, SYSDATE);
+INSERT INTO ARTICOLI (id, pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES (id_articolo.nextval, 'A1', '$$', 'R001', 'Cambio olio motore', 50.00, SYSDATE, SYSDATE);
+INSERT INTO ARTICOLI (id, pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES (id_articolo.nextval, 'A2', 'SG', 'R002', 'Filtro olio', 15.00, SYSDATE, SYSDATE);
+INSERT INTO ARTICOLI (id, pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES (id_articolo.nextval, 'A3', 'MQ', 'R003', 'Filtro aria', 18.00, SYSDATE, SYSDATE);
+INSERT INTO ARTICOLI (id, pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES (id_articolo.nextval, 'A4', 'YA', 'R004', 'Filtro abitacolo', 20.00, SYSDATE, SYSDATE);
+INSERT INTO ARTICOLI (id, pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES (id_articolo.nextval, 'B1', '$$', 'S001', 'Manodopera generale', 40.00, SYSDATE, SYSDATE);
+INSERT INTO ARTICOLI (id, pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES (id_articolo.nextval, 'B2', '$$', 'S002', 'Diagnosi centralina', 35.00, SYSDATE, SYSDATE);
+INSERT INTO ARTICOLI (id, pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES (id_articolo.nextval, 'C1', 'YA', 'R005', 'Pastiglie freni anteriori', 45.00, SYSDATE, SYSDATE);
+INSERT INTO ARTICOLI (id, pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES (id_articolo.nextval, 'C2', 'SG', 'R006', 'Dischi freno anteriori', 90.00, SYSDATE, SYSDATE);
+INSERT INTO ARTICOLI (id, pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES (id_articolo.nextval, 'C3', 'MQ', 'R007', 'Batteria 60Ah', 85.00, SYSDATE, SYSDATE);
+INSERT INTO ARTICOLI (id, pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES (id_articolo.nextval, 'C4', 'SG', 'R008', 'Candele accensione (4pz)', 30.00, SYSDATE, SYSDATE);
+INSERT INTO ARTICOLI (id, pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES (id_articolo.nextval, 'D1', 'YA', 'R009', 'Lampadina H7', 8.00, SYSDATE, SYSDATE);
+INSERT INTO ARTICOLI (id, pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES (id_articolo.nextval, 'D2', 'SG', 'R010', 'Tergicristallo anteriore', 25.00, SYSDATE, SYSDATE);
+INSERT INTO ARTICOLI (id, pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES (id_articolo.nextval, 'D3', 'MQ', 'R011', 'Tergicristallo posteriore', 15.00, SYSDATE, SYSDATE);
+INSERT INTO ARTICOLI (id, pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES (id_articolo.nextval, 'E1', 'YA', 'R012', 'Liquido freni DOT4', 10.00, SYSDATE, SYSDATE);
+INSERT INTO ARTICOLI (id, pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES (id_articolo.nextval, 'E2', 'YA', 'R013', 'Antigelo radiatore', 12.00, SYSDATE, SYSDATE);
+INSERT INTO ARTICOLI (id, pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES (id_articolo.nextval, 'F1', '$$', 'R014', 'Pulizia iniettori', 60.00, SYSDATE, SYSDATE);
+INSERT INTO ARTICOLI (id, pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES (id_articolo.nextval, 'F2', 'MQ', 'R015', 'Additivo diesel', 14.00, SYSDATE, SYSDATE);
+INSERT INTO ARTICOLI (id, pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES (id_articolo.nextval, 'G1', '$$', 'S003', 'Montaggio pneumatici', 25.00, SYSDATE, SYSDATE);
+INSERT INTO ARTICOLI (id, pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES (id_articolo.nextval, 'G2', '$$', 'S004', 'Equilibratura ruote', 20.00, SYSDATE, SYSDATE);
+INSERT INTO ARTICOLI (id, pos_magazzino, sf, cod_articolo, descrizione, prezzo_unit, data_ins, data_agg) VALUES (id_articolo.nextval, 'G3', '$$', 'S005', 'Controllo livelli', 10.00, SYSDATE, SYSDATE);
 
 -- Procedura per i log
 CREATE OR REPLACE PROCEDURE inserisci_log(p_livello IN VARCHAR2, p_messaggio IN VARCHAR2)
@@ -265,8 +265,8 @@ BEGIN
             v_data_prev_cons := SYSDATE + TRUNC(DBMS_RANDOM.VALUE(1, 11));
 
             -- Inserisci fattura
-            INSERT INTO fatture (id_filiale, protocollo, id_cliente, tipo_doc, numero_fatt, data_fatt, n_pagine, codice_pagina, mod_pagamento, causale, nota_doc, data_prev_consegna, banca_appoggio, totale, id_meccanico, id_veicolo)
-            VALUES (v_id_filiale, v_prot_fatt, v_id_cliente, v_tipo_doc, v_numero_fatt, v_data_fattura, v_n_pagine, v_codice_pagina, v_mod_pagamento, v_causale, v_nota_doc, v_data_prev_cons, v_banca_appoggio, 0, v_meccanico, v_veicolo)
+            INSERT INTO fatture (id, id_filiale, protocollo, id_cliente, tipo_doc, numero_fatt, data_fatt, n_pagine, codice_pagina, mod_pagamento, causale, nota_doc, data_prev_consegna, banca_appoggio, totale, id_meccanico, id_veicolo)
+            VALUES (id_fattura.nextval, v_id_filiale, v_prot_fatt, v_id_cliente, v_tipo_doc, v_numero_fatt, v_data_fattura, v_n_pagine, v_codice_pagina, v_mod_pagamento, v_causale, v_nota_doc, v_data_prev_cons, v_banca_appoggio, 0, v_meccanico, v_veicolo)
             RETURNING id INTO v_id_fattura;
             inserisci_log('INFO', 'Inserita fattura ' || v_numero_fatt || ' (ID: ' || v_id_fattura || ')');
 
@@ -297,7 +297,12 @@ BEGIN
                     inserisci_log('DEBUG', 'Generata quantità: ' || v_quantita || ' | dell' || CHR(39) || 'articolo: ' || v_id_articolo || ' | per la fattura: ' || v_numero_fatt);
                     v_sconto := ROUND(DBMS_RANDOM.VALUE(0, v_prezzo_unit * v_quantita * 0.5), 2);
                     inserisci_log('DEBUG', 'Generato sconto: ' || v_sconto || ' | dell' || CHR(39) || 'articolo: ' || v_id_articolo || ' | per la fattura: ' || v_numero_fatt);
-            
+
+                    -- Controllo che lo sconto non sia maggiore del totale, altrimenti lo azzero
+                    IF v_sconto > (v_prezzo_unit * v_quantita) THEN
+                        v_sconto := 0;
+                    END IF;
+
                     -- Calcolo subtotale e somma al totale
                     v_subtot := (v_prezzo_unit * v_quantita) - v_sconto;
                     v_totale := v_totale + v_subtot;

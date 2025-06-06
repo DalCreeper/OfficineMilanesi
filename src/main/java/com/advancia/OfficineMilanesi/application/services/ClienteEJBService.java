@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface ClienteEJBService {
     List<ClienteDto> getAllClienti();
-    ClienteDto getClienteById(int id);
+    ClienteDto getClienteById(long id);
     void createCliente(ClienteDto clienteDto);
-    void updateCliente(int id, ClienteDto clienteAgg);
-    void deleteCliente(int id);
+    void updateCliente(long id, ClienteDto clienteAgg);
+    void deleteCliente(long id);
 }

@@ -4,16 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
 import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Cliente implements Serializable {
-    private static final long serialVersionUID = 1L;
-
-    private int id;
+public class Cliente {
+    private long id;
     private String ragSociale;
     private String pIva;
     private String codFiscale;

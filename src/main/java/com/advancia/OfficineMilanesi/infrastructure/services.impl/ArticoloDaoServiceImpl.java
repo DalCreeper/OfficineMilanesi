@@ -24,15 +24,15 @@ public class ArticoloDaoServiceImpl implements ArticoloDaoService {
     @Override
     public List<Articolo> getAllArticoli() {
         try {
-            List<ArticoloEntity> articoliEntity = articoloDao.getAllArticoli(em);
-            return articoloEntityMappers.convertFromEntity(articoliEntity);
+            List<ArticoloEntity> articoli = articoloDao.getAllArticoli(em);
+            return articoloEntityMappers.convertFromEntity(articoli);
         } catch(Exception e) {
             throw new DBException("Errore cercando di scaricare gli articoli.", e);
         }
     }
 
     @Override
-    public Articolo getArticoloById(int id) {
+    public Articolo getArticoloById(long id) {
         try {
             ArticoloEntity articoloEntity = articoloDao.getArticoloById(id, em);
             return articoloEntityMappers.convertFromEntity(articoloEntity);
@@ -52,17 +52,17 @@ public class ArticoloDaoServiceImpl implements ArticoloDaoService {
     }
 
     @Override
-    public void updateArticolo(int id, Articolo articoloAgg) {
+    public void updateArticolo(long id, Articolo articoloAgg) {
         try {
             ArticoloEntity articoloEntity = articoloEntityMappers.convertToEntity(articoloAgg);
             articoloDao.updateArticolo(id, articoloEntity, em);
         } catch(Exception e) {
-            throw new DBException("Errore cercando si aggiornare l'articolo con ID: " + id, e);
+            throw new DBException("Errore cercando di aggiornare l'articolo con ID: " + id, e);
         }
     }
 
     @Override
-    public void deleteArticolo(int id) {
+    public void deleteArticolo(long id) {
         try {
             articoloDao.deleteArticolo(id, em);
         } catch(Exception e) {

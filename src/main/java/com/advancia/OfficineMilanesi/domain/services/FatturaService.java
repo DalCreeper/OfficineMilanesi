@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface FatturaService {
     List<Fattura> getFatture();
-    List<Fattura> getFattureByIdFiliale(int id);
-    List<Fattura> getFattureByIdCliente(int id);
-    List<Fattura> getFattureByIdMeccanico(int id);
-    List<Fattura> getFattureByIdVeicolo(int id);
-    void deleteFattura(int id);
+    List<Fattura> getFattureByIdFiliale(long id);
+    List<Fattura> getFattureByIdCliente(long id);
+    List<Fattura> getFattureByIdMeccanico(long id);
+    List<Fattura> getFattureByIdVeicolo(long id);
+    void deleteFattura(long id);
 }

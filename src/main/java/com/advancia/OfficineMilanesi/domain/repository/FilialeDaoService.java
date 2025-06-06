@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface FilialeDaoService {
     List<Filiale> getAllFiliali();
-    Filiale getFilialeById(int id);
+    Filiale getFilialeById(long id);
     void createFiliale(Filiale filiale);
-    void updateFiliale(int id, Filiale filialeAgg);
-    void deleteFiliale(int id);
+    void updateFiliale(long id, Filiale filialeAgg);
+    void deleteFiliale(long id);
 }

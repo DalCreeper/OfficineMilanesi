@@ -4,16 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Articolo implements Serializable {
-    private static final long serialVersionUID = 1L;
-
+public class Articolo {
     private Long id;
     private String posMagazzino;
     private String sf;

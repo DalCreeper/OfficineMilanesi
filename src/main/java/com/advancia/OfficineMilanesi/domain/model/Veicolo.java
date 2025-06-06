@@ -4,15 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
 import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Veicolo implements Serializable {
-    private static final long serialVersionUID = 1L;
-
+public class Veicolo {
     private Long id;
     private String modelloVett;
     private String telaio;

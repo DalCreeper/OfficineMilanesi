@@ -3,6 +3,7 @@ package com.advancia.OfficineMilanesi.infrastructure.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -11,14 +12,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "FATTURE")
+@Table(name = "FATTURE", schema = "OFFMILANESI")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString(exclude = {"articoli"})
 public class FatturaEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "fattura_seq")
+    @SequenceGenerator(name = "fattura_seq", sequenceName = "ID_FATTURA", allocationSize = 1)
     @Column(name = "ID")
     private Long id;
 

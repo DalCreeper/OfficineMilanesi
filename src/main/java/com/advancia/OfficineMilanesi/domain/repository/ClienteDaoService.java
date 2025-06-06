@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface ClienteDaoService {
     List<Cliente> getAllClienti();
-    Cliente getClienteById(int id);
+    Cliente getClienteById(long id);
     void createCliente(Cliente cliente);
-    void updateCliente(int id, Cliente clienteAgg);
-    void deleteCliente(int id);
+    void updateCliente(long id, Cliente clienteAgg);
+    void deleteCliente(long id);
 }

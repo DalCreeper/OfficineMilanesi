@@ -22,7 +22,7 @@ public class ArticoloDao {
         }
     }
 
-    public ArticoloEntity getArticoloById(int id, EntityManager em) {
+    public ArticoloEntity getArticoloById(long id, EntityManager em) {
         try {
             return em.createQuery(GET_ARTICOLO_BY_ID, ArticoloEntity.class).setParameter("id", id).getSingleResult();
         } catch(Exception e) {
@@ -38,7 +38,7 @@ public class ArticoloDao {
         }
     }
 
-    public void updateArticolo(int id, ArticoloEntity a, EntityManager em) {
+    public void updateArticolo(long id, ArticoloEntity a, EntityManager em) {
         try {
             ArticoloEntity existingArticoloEntity = em.find(ArticoloEntity.class, id);
             if(existingArticoloEntity != null) {
@@ -58,7 +58,7 @@ public class ArticoloDao {
         }
     }
 
-    public void deleteArticolo(int id, EntityManager em) {
+    public void deleteArticolo(long id, EntityManager em) {
         try {
             ArticoloEntity articoloEntity = em.find(ArticoloEntity.class, id);
             if(articoloEntity != null) {

@@ -24,28 +24,28 @@ public class FilialeRestController {
 
     @GET
     @Path("/{id}")
-    public FilialeDto getFilialeById(@PathParam("id") int id) {
+    public FilialeDto getFilialeById(@PathParam("id") long id) {
         FilialeDto filialeDto = filialeService.getFilialeById(id);
         if(filialeDto == null) throw new NotFoundException("Filiale con id " + id + " non trovata.");
         return filialeDto;
     }
 
     @POST
-    public Response createFiliale(FilialeDto dto) {
-        filialeService.createFiliale(dto);
+    public Response createFiliale(FilialeDto filialeDto) {
+        filialeService.createFiliale(filialeDto);
         return Response.status(Response.Status.CREATED).build();
     }
 
     @PUT
     @Path("/{id}")
-    public Response updateFiliale(@PathParam("id") int id, FilialeDto filialeDto) {
-        filialeService.updateFiliale(id, filialeDto);
+    public Response updateFiliale(@PathParam("id") long id, FilialeDto filialeAgg) {
+        filialeService.updateFiliale(id, filialeAgg);
         return Response.ok().build();
     }
 
     @DELETE
     @Path("/{id}")
-    public Response deleteFiliale(@PathParam("id") int id) {
+    public Response deleteFiliale(@PathParam("id") long id) {
         filialeService.deleteFiliale(id);
         return Response.noContent().build();
     }

@@ -22,7 +22,7 @@ public class ClienteDao {
         }
     }
 
-    public ClienteEntity getClienteById(int id, EntityManager em) {
+    public ClienteEntity getClienteById(long id, EntityManager em) {
         try {
             return em.createQuery(GET_CLIENTE_BY_ID, ClienteEntity.class).setParameter("id", id).getSingleResult();
         } catch(Exception e) {
@@ -38,7 +38,7 @@ public class ClienteDao {
         }
     }
 
-    public void updateCliente(int id, ClienteEntity c, EntityManager em) {
+    public void updateCliente(long id, ClienteEntity c, EntityManager em) {
         try {
             ClienteEntity existingClienteEntity = em.find(ClienteEntity.class, id);
             if(existingClienteEntity != null) {
@@ -63,7 +63,7 @@ public class ClienteDao {
         }
     }
 
-    public void deleteCliente(int id, EntityManager em) {
+    public void deleteCliente(long id, EntityManager em) {
         try {
             ClienteEntity clienteEntity = em.find(ClienteEntity.class, id);
             if(clienteEntity != null) {

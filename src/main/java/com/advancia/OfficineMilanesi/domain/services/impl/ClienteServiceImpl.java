@@ -19,7 +19,7 @@ public class ClienteServiceImpl implements ClienteService {
     }
 
     @Override
-    public Cliente getClienteById(int id) {
+    public Cliente getClienteById(long id) {
         return clienteDaoService.getClienteById(id);
     }
 
@@ -29,12 +29,12 @@ public class ClienteServiceImpl implements ClienteService {
     }
 
     @Override
-    public void updateCliente(int id, Cliente clienteAgg) {
+    public void updateCliente(long id, Cliente clienteAgg) {
         clienteDaoService.updateCliente(id, clienteAgg);
     }
 
     @Override
-    public void deleteCliente(int id) {
+    public void deleteCliente(long id) {
         clienteDaoService.deleteCliente(id);
     }
 }

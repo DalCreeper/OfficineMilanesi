@@ -25,7 +25,7 @@ public class VeicoloDao {
         }
     }
 
-    public VeicoloEntity getVeicoloById(int id, EntityManager em) {
+    public VeicoloEntity getVeicoloById(long id, EntityManager em) {
         try {
             return em.createQuery(GET_VEICOLO_BY_ID, VeicoloEntity.class).setParameter("id", id).getSingleResult();
         } catch(Exception e) {
@@ -41,7 +41,7 @@ public class VeicoloDao {
         }
     }
 
-    public void updateVeicolo(int id, VeicoloEntity v, EntityManager em) {
+    public void updateVeicolo(long id, VeicoloEntity v, EntityManager em) {
         try {
             VeicoloEntity existingVeicoloEntity = em.find(VeicoloEntity.class, id);
             if(existingVeicoloEntity != null) {
@@ -66,7 +66,7 @@ public class VeicoloDao {
         }
     }
 
-    public void deleteVeicolo(int id, EntityManager em) {
+    public void deleteVeicolo(long id, EntityManager em) {
         try {
             VeicoloEntity veicoloEntity = em.find(VeicoloEntity.class, id);
             if(veicoloEntity != null) {

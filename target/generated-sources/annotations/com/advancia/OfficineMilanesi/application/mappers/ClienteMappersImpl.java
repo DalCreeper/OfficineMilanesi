@@ -8,8 +8,8 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-06-05T15:14:58+0200",
-    comments = "version: 1.5.3.Final, compiler: javac, environment: Java 1.8.0_441 (Oracle Corporation)"
+    date = "2025-06-06T23:22:15+0200",
+    comments = "version: 1.5.3.Final, compiler: javac, environment: Java 1.8.0_202 (Oracle Corporation)"
 )
 public class ClienteMappersImpl implements ClienteMappers {
 
@@ -23,7 +23,7 @@ public class ClienteMappersImpl implements ClienteMappers {
 
         clienteDto.setId( cliente.getId() );
         clienteDto.setRagSociale( cliente.getRagSociale() );
-        clienteDto.setP_iva( cliente.getP_iva() );
+        clienteDto.setPIva( cliente.getPIva() );
         clienteDto.setCodFiscale( cliente.getCodFiscale() );
         clienteDto.setPec( cliente.getPec() );
         clienteDto.setTelefono( cliente.getTelefono() );
@@ -48,7 +48,7 @@ public class ClienteMappersImpl implements ClienteMappers {
 
         cliente.setId( clienteDto.getId() );
         cliente.setRagSociale( clienteDto.getRagSociale() );
-        cliente.setP_iva( clienteDto.getP_iva() );
+        cliente.setPIva( clienteDto.getPIva() );
         cliente.setCodFiscale( clienteDto.getCodFiscale() );
         cliente.setPec( clienteDto.getPec() );
         cliente.setTelefono( clienteDto.getTelefono() );
