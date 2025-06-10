@@ -1,4 +1,4 @@
-package com.advancia.OfficineMilanesi.domain.repository;
+package com.advancia.OfficineMilanesi.domain.repository.dao;
 
 import com.advancia.OfficineMilanesi.domain.model.Articolo;
 

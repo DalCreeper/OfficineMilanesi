@@ -11,6 +11,10 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedStoredProcedureQuery(
+    name = "Fattura.generaRandom",
+    procedureName = "genera_fatture_random"
+)
 @Entity
 @Table(name = "FATTURE", schema = "OFFMILANESI")
 @Data
@@ -77,6 +81,6 @@ public class FatturaEntity {
     @JoinColumn(name = "ID_VEICOLO", nullable = false)
     private VeicoloEntity veicoloEntity;
 
-    @OneToMany(mappedBy = "fatturaEntity", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "fatturaEntity", cascade = CascadeType.REMOVE)
     private List<FatturaArticoloEntity> articoli = new ArrayList<>();
 }

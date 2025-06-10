@@ -1,8 +1,7 @@
 package com.advancia.OfficineMilanesi.infrastructure.services.impl;
 
-import com.advancia.OfficineMilanesi.domain.model.Cliente;
 import com.advancia.OfficineMilanesi.domain.model.Veicolo;
-import com.advancia.OfficineMilanesi.domain.repository.VeicoloDaoService;
+import com.advancia.OfficineMilanesi.domain.repository.dao.VeicoloDaoService;
 import com.advancia.OfficineMilanesi.infrastructure.dao.VeicoloDao;
 import com.advancia.OfficineMilanesi.infrastructure.exceptions.DBException;
 import com.advancia.OfficineMilanesi.infrastructure.mappers.VeicoloEntityMappers;

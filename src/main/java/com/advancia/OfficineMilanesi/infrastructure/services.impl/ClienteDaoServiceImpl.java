@@ -1,7 +1,7 @@
 package com.advancia.OfficineMilanesi.infrastructure.services.impl;
 
 import com.advancia.OfficineMilanesi.domain.model.Cliente;
-import com.advancia.OfficineMilanesi.domain.repository.ClienteDaoService;
+import com.advancia.OfficineMilanesi.domain.repository.dao.ClienteDaoService;
 import com.advancia.OfficineMilanesi.infrastructure.dao.ClienteDao;
 import com.advancia.OfficineMilanesi.infrastructure.exceptions.DBException;
 import com.advancia.OfficineMilanesi.infrastructure.mappers.ClienteEntityMappers;

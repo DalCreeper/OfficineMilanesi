@@ -1,7 +1,7 @@
 package com.advancia.OfficineMilanesi.domain.services.impl;
 
 import com.advancia.OfficineMilanesi.domain.model.Veicolo;
-import com.advancia.OfficineMilanesi.domain.repository.VeicoloDaoService;
+import com.advancia.OfficineMilanesi.domain.repository.dao.VeicoloDaoService;
 import com.advancia.OfficineMilanesi.domain.services.VeicoloService;
 
 import javax.ejb.EJB;

@@ -1,7 +1,7 @@
 package com.advancia.OfficineMilanesi.infrastructure.services.impl;
 
 import com.advancia.OfficineMilanesi.domain.model.Fattura;
-import com.advancia.OfficineMilanesi.domain.repository.FatturaDaoService;
+import com.advancia.OfficineMilanesi.domain.repository.dao.FatturaDaoService;
 import com.advancia.OfficineMilanesi.infrastructure.dao.FatturaDao;
 import com.advancia.OfficineMilanesi.infrastructure.exceptions.DBException;
 import com.advancia.OfficineMilanesi.infrastructure.mappers.FatturaEntityMappers;

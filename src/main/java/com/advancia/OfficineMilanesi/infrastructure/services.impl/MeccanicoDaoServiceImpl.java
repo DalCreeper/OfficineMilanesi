@@ -1,7 +1,7 @@
 package com.advancia.OfficineMilanesi.infrastructure.services.impl;
 
 import com.advancia.OfficineMilanesi.domain.model.Meccanico;
-import com.advancia.OfficineMilanesi.domain.repository.MeccanicoDaoService;
+import com.advancia.OfficineMilanesi.domain.repository.dao.MeccanicoDaoService;
 import com.advancia.OfficineMilanesi.infrastructure.dao.MeccanicoDao;
 import com.advancia.OfficineMilanesi.infrastructure.exceptions.DBException;
 import com.advancia.OfficineMilanesi.infrastructure.mappers.MeccanicoEntityMappers;

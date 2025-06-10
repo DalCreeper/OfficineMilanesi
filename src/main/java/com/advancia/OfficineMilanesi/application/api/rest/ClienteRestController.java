@@ -15,38 +15,38 @@ import java.util.List;
 @Produces(MediaType.APPLICATION_JSON)
 public class ClienteRestController {
     @EJB
-    private ClienteEJBService ClienteService;
+    private ClienteEJBService clienteService;
 
     @GET
     public List<ClienteDto> getAllClienti() {
-        return ClienteService.getAllClienti();
+        return clienteService.getAllClienti();
     }
 
     @GET
     @Path("/{id}")
     public ClienteDto getClienteById(@PathParam("id") long id) {
-        ClienteDto clienteDto = ClienteService.getClienteById(id);
+        ClienteDto clienteDto = clienteService.getClienteById(id);
         if(clienteDto == null) throw new NotFoundException("Cliente con id " + id + " non trovato.");
         return clienteDto;
     }
 
     @POST
     public Response createCliente(ClienteDto clienteDto) {
-        ClienteService.createCliente(clienteDto);
+        clienteService.createCliente(clienteDto);
         return Response.status(Response.Status.CREATED).build();
     }
 
     @PUT
     @Path("/{id}")
     public Response updateCliente(@PathParam("id") long id, ClienteDto clienteAgg) {
-        ClienteService.updateCliente(id, clienteAgg);
+        clienteService.updateCliente(id, clienteAgg);
         return Response.ok().build();
     }
 
     @DELETE
     @Path("/{id}")
     public Response deleteCliente(@PathParam("id") long id) {
-        ClienteService.deleteCliente(id);
+        clienteService.deleteCliente(id);
         return Response.noContent().build();
     }
 }

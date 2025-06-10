@@ -13,6 +13,7 @@ public class APIApplication extends Application {
         set.add(ClienteRestController.class);
         set.add(FatturaRestController.class);
         set.add(FilialeRestController.class);
+        set.add(ProceduresRestController.class);
         return set;
     }
 }

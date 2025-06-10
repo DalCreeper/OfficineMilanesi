@@ -2,7 +2,7 @@ package com.advancia.OfficineMilanesi.infrastructure.services.impl;
 
 import com.advancia.OfficineMilanesi.infrastructure.exceptions.DBException;
 import com.advancia.OfficineMilanesi.domain.model.Articolo;
-import com.advancia.OfficineMilanesi.domain.repository.ArticoloDaoService;
+import com.advancia.OfficineMilanesi.domain.repository.dao.ArticoloDaoService;
 import com.advancia.OfficineMilanesi.infrastructure.dao.ArticoloDao;
 import com.advancia.OfficineMilanesi.infrastructure.mappers.ArticoloEntityMappers;
 import com.advancia.OfficineMilanesi.infrastructure.model.ArticoloEntity;

@@ -1,7 +1,7 @@
 package com.advancia.OfficineMilanesi.domain.services.impl;
 
 import com.advancia.OfficineMilanesi.domain.model.Cliente;
-import com.advancia.OfficineMilanesi.domain.repository.ClienteDaoService;
+import com.advancia.OfficineMilanesi.domain.repository.dao.ClienteDaoService;
 import com.advancia.OfficineMilanesi.domain.services.ClienteService;
 
 import javax.ejb.EJB;

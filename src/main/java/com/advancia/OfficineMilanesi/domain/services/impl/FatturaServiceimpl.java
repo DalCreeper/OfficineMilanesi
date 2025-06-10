@@ -1,7 +1,7 @@
 package com.advancia.OfficineMilanesi.domain.services.impl;
 
 import com.advancia.OfficineMilanesi.domain.model.Fattura;
-import com.advancia.OfficineMilanesi.domain.repository.FatturaDaoService;
+import com.advancia.OfficineMilanesi.domain.repository.dao.FatturaDaoService;
 import com.advancia.OfficineMilanesi.domain.services.FatturaService;
 
 import javax.ejb.EJB;
