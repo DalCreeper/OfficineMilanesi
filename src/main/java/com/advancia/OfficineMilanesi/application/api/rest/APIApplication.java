@@ -1,5 +1,7 @@
 package com.advancia.OfficineMilanesi.application.api.rest;
 
+import com.advancia.OfficineMilanesi.application.api.filters.CorsFilter;
+
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 import java.util.HashSet;
@@ -14,6 +16,7 @@ public class APIApplication extends Application {
         set.add(FatturaRestController.class);
         set.add(FilialeRestController.class);
         set.add(ProceduresRestController.class);
+        set.add(CorsFilter.class);
         return set;
     }
 }
