@@ -1,5 +1,5 @@
 # OfficineMilanesi
-API REST per chiamre procedure PL/SQL in ORACLE per generare fatture randomicamente e per la gestione CRUD delle tabelle.
+API REST per chiamare procedure PL/SQL in ORACLE per generare fatture randomicamente e per la gestione CRUD delle tabelle.
 
 # Query_Officine_Milanesi.sql
 
